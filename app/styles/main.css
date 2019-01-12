@@ -1,0 +1,43 @@
+.browsehappy {
+  margin: 0.2em 0;
+  background: #ccc;
+  color: #000;
+  padding: 0.2em 0;
+}
+
+th, td {
+  white-space: nowrap;
+  padding: 5px;
+  text-align: center;
+}
+
+th {
+  color: #FFF;
+  background-color: #b71b28;
+}
+
+h3.right {
+  float: right;
+  padding: 5px;
+  color: #b71b28;
+}
+
+table {
+  width: 100%;
+}
+
+div.menu {
+  text-align: center;
+  opacity: 100%;
+  position: fixed;
+  top: 20%;
+  left: 40%;
+  background-color: white;
+  padding: 5px;
+  border: #000;
+  border-style: solid;
+}
+
+span.r {
+  border: none;
+}

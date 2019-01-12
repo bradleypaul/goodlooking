@@ -1,0 +1,103 @@
+<div>
+  <h3 ng-click="toggleShow()" class="right">ADVANCED SEARCH</h3>
+  <div class="menu" ng-if="showAdvanced">
+    <h3>ADVANCED SEARCH</h3>
+    <hr />
+    <div class="form-group">
+      <div>
+        <label for="mr"> MR #: </label>
+        <input type="text" id="mr" ng-model="params.columns.mr" class="form-control">
+      </div>
+      <div>
+        <label for="name"> NAME: </label>
+        <input type="text" id="name" ng-model="params.columns.name" class="form-control">
+      </div>
+      <div>
+        <label for="provider"> PROVIDER: </label>
+        <input type="text" id="provider" ng-model="params.columns.provider" class="form-control">
+      </div>
+      <div>
+        <label>ORDER: </label>
+        <span class="form-control r">
+          <input type="radio" name="order" value="asc" id="asc" ng-model="params.order">
+          <label for="asc"> ASC </label>
+
+          <input type="radio" name="order" value="desc" id="desc" ng-model="params.order">
+          <label for="desc"> DESC </label>
+        </span>
+      </div>
+      <div>
+        ORDER BY:
+        <select ng-model="params.orderBy" class="form-control">
+          <option ng-repeat="option in options">{{option | uppercase}}</option>
+        </select>
+      </div>
+      <div>
+        <label for="limitTo"> LIMIT TO: </label>
+        <input type="text" id="limitTo" ng-model="params.limit" class="form-control" numeric>
+      </div>
+    </div>
+    <div>
+
+    </div>
+    <span class="form-group">
+      <button value="reset" ng-click="reset()">RESET</button>
+      <button value="reset" ng-click="search()">SEARCH</button>
+      <button value="reset" ng-click="toggleShow()">CANCEL</button>
+    </span>
+  </div>
+  <table>
+    <tr>
+      <th>NAME</th>
+      <th>MR</th>
+      <th>ID NUM</th>
+      <th>PROV</th>
+      <th>INSURANCE</th>
+      <th>ADDRESS</th>
+      <th>CITY</th>
+      <th>ST</th>
+      <th>PHONE</th>
+      <th>DOB</th>
+      <th>ADMIT</th>
+      <th>DC</th>
+    </tr>
+    <tr ng-repeat="patient in patients">
+      <td>
+        {{patient.name}}
+      </td>
+      <td>
+        {{patient.mr}}
+      </td>
+      <td>
+        {{patient.idnum}}
+      </td>
+      <td>
+        {{patient.prov}}
+      </td>
+      <td>
+        {{patient.insurance}}
+      </td>
+      <td>
+        {{patient.address}}
+      </td>
+      <td>
+        {{patient.city}}
+      </td>
+      <td>
+        {{patient.st}}
+      </td>
+      <td>
+        {{patient.phone}}
+      </td>
+      <td>
+        {{patient.dob}}
+      </td>
+      <td>
+        {{patient.admit}}
+      </td>
+      <td>
+        {{patient.dc}}
+      </td>
+    </tr>
+  </table>
+</div>
